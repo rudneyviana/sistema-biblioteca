@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Biblioteca</h1>
+    </header>
+
+    <div class="container">
+        <div class="menu">
+            <h2 class="menu-title">Menu Principal</h2>
+            <div class="menu-options">
+                <button class="btn" onclick="showSection('relatorio')">
+                    <img src="./assets/Scroll.svg" alt="Relatório Icon">
+                    <span>Gerar Relatório</span>
+                </button>
+                <button class="btn" onclick="showSection('cadastro')">
+                    <img src="./assets/Book.svg" alt="Livro Icon">
+                    <span>Cadastrar Livro</span>
+                </button>
+                <button class="btn" onclick="listarLivros()">
+                    <img src="./assets/Books.svg" alt="Livros Icon">
+                    <span>Listar Livros</span>
+                </button>
+                <button class="btn" onclick="calcularTotal()">
+                    <img src="./assets/Calculator.svg" alt="Calculadora Icon">
+                    <span>Calcular Total</span>
+                </button>
+                <button class="btn btn-danger" onclick="showSection('excluir')">
+                    <img src="./assets/Trash.svg" alt="Lixeira Icon">
+                    <span>Excluir Livro</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div id="relatorio" class="content hidden">
+            <h2>Relatório Completo</h2>
+            <div id="relatorio-content"></div>
+        </div>
+
+        <div id="cadastro" class="content hidden">
+            <h2>Cadastrar Novo Livro</h2>
+            <form id="cadastro-form">
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" required>
+                </div>
+                <div class="form-group">
+                    <label for="ano">Ano de Publicação:</label>
+                    <input type="number" id="ano" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" min="1" required>
+                </div>
+                <button type="submit" class="btn">
+                    <img src="./assets/Book Plus.svg" alt="Adição de Livro Icon">
+                    <span>Cadastrar Livro</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="listagem" class="content hidden">
+            <h2>Lista de Livros</h2>
+            <div id="listagem-content" class="book-list"></div>
+        </div>
+
+        <div id="total" class="content hidden">
+            <h2>Total de Livros</h2>
+            <div id="total-content"></div>
+        </div>
+
+        <div id="excluir" class="content hidden">
+            <h2>Excluir Livro</h2>
+            <div id="excluir-content">
+                <div class="form-group">
+                    <label for="livro-select">Selecione o livro para excluir:</label>
+                    <select id="livro-select"></select>
+                </div>
+                <button class="btn btn-danger" onclick="excluirLivroSelecionado()">
+                    <img src="./assets/Trash.svg" alt="Lixeira Icon">
+                    <span>Excluir Livro</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sistema de Biblioteca &copy; 2023</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
