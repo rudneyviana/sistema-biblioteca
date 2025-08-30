@@ -4,7 +4,6 @@ Um sistema web para gerenciamento de biblioteca desenvolvido em JavaScript puro,
 
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/9a64daf0-25a9-4c89-9584-1f85c571d145" />
 
-
 ## 📋 Funcionalidades
 
 - 📖 Cadastro de livros (título, autor, ano, quantidade)
@@ -60,24 +59,6 @@ O sistema possui uma interface limpa e intuitiva com:
 2. As informações persistem mesmo após fechar o navegador
 3. Todas as operações são realizadas no cliente (não requer servidor)
 4. Inclui validação de estoque alto (alerta quando total > 20 livros)
-
-## 📝 Notas de Desenvolvimento
-
-Este projeto foi desenvolvido como exemplo de aplicação web front-end com:
-- Organização modular de código JavaScript
-- Manipulação do DOM
-- Trabalho com formulários e eventos
-- Persistência de dados no navegador
-- Design responsivo
-
-## 🔮 Possíveis Melhorias Futuras
-
-- Implementação de edição de livros cadastrados
-- Categorização de livros por gênero
-- Sistema de busca/filtro
-- Exportação de relatórios em PDF
-- Modo escuro/claro
-- Backup dos dados em nuvem
 
 ## 📄 Licença
 
